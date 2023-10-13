@@ -1,0 +1,94 @@
+.ticketSalesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.ticketInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(100% - 40%);
+  border-bottom: 1px solid black;
+}
+
+.sub-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.bus-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 350px;
+  margin-top: 20px;
+}
+
+.bus-seat {
+  width: 50px;
+  height: 50px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.bus-seat:nth-child(2n) {
+  margin-right: 100px;
+}
+
+.info {
+  margin-top: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.totalPrice {
+  margin-left: 30px;
+}
+
+.continue-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.male {
+  background-color: #3498db;
+  color: white;
+  cursor: not-allowed;
+}
+
+.female {
+  background-color: pink;
+  color: white;
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: #55f14f;
+  color: white;
+}

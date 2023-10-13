@@ -1,0 +1,68 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  gap: 10px;
+}
+
+.loginHeader {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.loginUserName,
+.loginPassword {
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.loginUserName:focus,
+.loginPassword:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0px 0px 5px #3498db;
+}
+
+.loginButton {
+  background-color: #3498db;
+  width: 400px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #2980b9;
+}
+
+.registerLink {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.registerHere {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+.registerHere:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}

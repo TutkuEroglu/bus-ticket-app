@@ -1,0 +1,14 @@
+.NotificationDescription {
+  font-size: 14px;
+}
+
+.NotificationTitle {
+  font-size: 16px;
+}
+
+.NotificationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}

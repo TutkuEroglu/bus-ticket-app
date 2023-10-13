@@ -1,0 +1,62 @@
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.registerHeader {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.registerInput:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0px 0px 5px #3498db;
+}
+
+.registerInput {
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.registerButton {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 400px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+  background-color: #2980b9;
+}
+
+.registerText {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.registerLink {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.registerLink:hover {
+  color: #2980b9;
+}
