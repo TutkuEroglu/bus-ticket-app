@@ -41,7 +41,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (departure && arrival && date) {
-      fetch("https://github.com/TutkuEroglu/bus-ticket-app/api/search-by-date", {
+      fetch("http://localhost:3000/api/search-by-date", {
         method: "POST",
         body: JSON.stringify({
           departure,
