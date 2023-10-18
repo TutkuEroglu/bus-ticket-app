@@ -9,7 +9,7 @@ import { sendMessage } from "../../components/Alerts";
 export async function getServerSideProps(context: any) {
   const id = context.query.id;
   const selectedBus = fetch(
-    "http://localhost:3000/api/searchData?id=" + id
+    "https://github.com/TutkuEroglu/bus-ticket-app/api/searchData?id=" + id
   ).then((response) => (response.json() as unknown) as SearchResultsInterface);
   return { props: selectedBus };
 }
