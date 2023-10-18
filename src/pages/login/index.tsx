@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import { sendMessage } from "@/components/Alerts";
 import { useUser } from "../../context/UserContext";
 import styles from "../../styles/Login.module.css";
@@ -34,12 +34,6 @@ export default function LoginPage() {
     }
   };
 
-  const handleRegister = () => {
-    if (!userLoggedIn) {
-      router.push("/register");
-    }
-  };
-
   return (
     <div className={styles.loginContainer}>
       <h1 className={styles.loginHeader}>Giriş Yap</h1>
@@ -62,7 +56,7 @@ export default function LoginPage() {
       </button>
       <p className={styles.registerLink}>
         Henüz kayıt değil misiniz?{" "}
-        <a className={styles.registerHere} onClick={handleRegister}>
+        <a className={styles.registerHere} onClick={() => router.push("/register")}>
           Buraya{" "}
         </a>
         tıklayarak kayıt olabilirsiniz.

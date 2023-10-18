@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from "react";
-import {useRouter} from "next/router";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import { useRouter } from "next/router";
 import { SearchResultsInterface } from "@/types";
 import Menu from "@/components/Menu";
 import styles from "../../styles/ticket-sales.module.css";
@@ -24,7 +24,7 @@ export default function TicketSalesPage(props: SearchResultsInterface) {
 
   useEffect(() => {
     calculateTotalPrice();
-  }, [selectedSeats]);
+  }, );
 
   useEffect(() => {
     const isLogged = getUser();
@@ -35,11 +35,9 @@ export default function TicketSalesPage(props: SearchResultsInterface) {
     }
   }, [getUser, router, isLoggedIn]);
 
-  const handleSeatClick = (seatNumber: number) => {
+  const handleSeatClick = useCallback((seatNumber: number) => {
     const userInfo = getUser();
-    
-    
-
+  
     if (selectedSeats.includes(seatNumber)) {
       setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber));
     } else if (selectedSeats.length >= 5) {
@@ -69,8 +67,7 @@ export default function TicketSalesPage(props: SearchResultsInterface) {
       }
       setSelectedSeats([...selectedSeats, seatNumber]);
     }
-    
-  };
+  }, [selectedSeats, getUser, setSelectedSeats, selectedBus]);
 
   const calculateTotalPrice = () => {
     if (!selectedBus) {
@@ -141,7 +138,7 @@ export default function TicketSalesPage(props: SearchResultsInterface) {
     } else {
       return <></>;
     }
-  }, [selectedBus, selectedSeats]);
+  }, [selectedBus, selectedSeats, handleSeatClick, getUser]);
 
   return (
     <div className={styles.ticketSalesContainer}>

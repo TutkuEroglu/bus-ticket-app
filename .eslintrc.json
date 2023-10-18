@@ -35,7 +35,8 @@
         "max": 10,
         "ignoreTypeImports": true
       }
-    ]
+    ],
+    "no-unused-vars": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2021,
