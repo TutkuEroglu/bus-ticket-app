@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import useRouter from "next/router";
+import {useRouter} from "next/router";
 import { SearchResultsInterface } from "@/types";
 import Menu from "@/components/Menu";
 import styles from "../../styles/ticket-sales.module.css";

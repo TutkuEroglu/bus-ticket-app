@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  useRouter  from "next/router";
+import { useRouter }  from "next/router";
 import { useUser } from "../../context/UserContext";
 import CustomMenuIcon from "./menuIcon";
 import CustomMenu from "./menu";

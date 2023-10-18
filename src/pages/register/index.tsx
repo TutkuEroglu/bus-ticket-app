@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useRouter from "next/router";
+import {useRouter} from "next/router";
 import { useUser } from "../../context/UserContext";
 import styles from "../../styles/register.module.css";
 import { sendMessage } from "../../components/Alerts";
