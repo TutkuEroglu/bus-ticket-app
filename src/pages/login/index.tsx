@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { sendMessage } from "@/components/Alerts";
 import { useUser } from "../../context/UserContext";
-import styles from "../../styles/Login.module.css";
+import styles from "../../styles/login.module.css";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
