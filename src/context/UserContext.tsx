@@ -30,7 +30,6 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const logout = () => {
-    setUser(null);
     setIsLoggedIn(false);
   };
 

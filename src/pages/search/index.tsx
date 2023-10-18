@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import useRouter from "next/router";
 import { sendMessage } from "@/components/Alerts";
 import Menu from "@/components/Menu";
 import { BusServicesInterface } from "../../types";

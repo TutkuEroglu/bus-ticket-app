@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { useRouter } from "next/router";
+import useRouter from "next/router";
 import { SearchResultsInterface } from "@/types";
 import Menu from "@/components/Menu";
 import styles from "../../styles/ticket-sales.module.css";
@@ -37,13 +37,14 @@ export default function TicketSalesPage(props: SearchResultsInterface) {
 
   const handleSeatClick = (seatNumber: number) => {
     const userInfo = getUser();
-    if (selectedSeats.length >= 5) {
-      sendMessage({ type: "error", title: "En fazla 5 koltuk seçebilirsin" });
-      
-    }
+    
+    
+
     if (selectedSeats.includes(seatNumber)) {
       setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber));
-    } else {
+    } else if (selectedSeats.length >= 5) {
+      sendMessage({ type: "error", title: "En fazla 5 koltuk seçebilirsin" });
+    }  else {
       const isEven = seatNumber % 2 == 0;
       const nearGender = selectedBus?.availableSeats.find((seat) =>
         isEven
@@ -68,6 +69,7 @@ export default function TicketSalesPage(props: SearchResultsInterface) {
       }
       setSelectedSeats([...selectedSeats, seatNumber]);
     }
+    
   };
 
   const calculateTotalPrice = () => {
